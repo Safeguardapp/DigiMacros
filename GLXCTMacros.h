@@ -3,7 +3,7 @@
     if (_u == nil) { \
         XCTFail(@"'%@' is not a valid UUID string", test); \
     } 
-#define XTCAssertIsKindOfClass(test, expression) \
-    if([test isKindOfClass: expression]) { \
+#define XCTAssertIsKindOfClass(test, expression) \
+    if(![test isKindOfClass: expression]) { \
         XCTFail(@"'%@' is not of class %@", test, expression); \
     } 
