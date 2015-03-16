@@ -15,6 +15,11 @@
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 #define kLanguageCode ([[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode])
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+#define UA_runOnMainThread if (![NSThread isMainThread]) { dispatch_sync(dispatch_get_main_queue(), ^{ [self performSelector:_cmd]; }); return; };
+#pragma clang diagnostic pop
+
 // Paths
 #define kDocumentDirectoryPath ([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0])
 #define kCachesDirectoryPath ([NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject])
@@ -30,10 +35,14 @@
 #else
 #define DLog(...)
 #endif
-#define CGRectLog(rect) DLog(@"(%f, %f) -> [%f, %f]", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
+
+#define DLogBounds(view) DLog(@"%@ bounds: %@", view, NSStringFromRect([view bounds]))
+#define DLogFrame(view) DLog(@"%@ frame: %@", view, NSStringFromRect([view frame]))
+
 #define ELOG(error)                                                                                                                                                                                              \
     [[[UIAlertView alloc] initWithTitle:[error localizedDescription] message:[error localizedRecoverySuggestion] delegate:nil cancelButtonTitle:NSLocalizedString(@"Dismiss", nil) otherButtonTitles:nil] show]; \
     DLog(@"%@", [error localizedDescription]);
+
 #define FONTS_LOG                                                                         \
     for (NSString * fontFamilyStrings in [UIFont familyNames])                            \
     {                                                                                     \
@@ -62,6 +71,7 @@
 #define convertToCm(inch) inch * 2.54
 #define convertToRadians(degrees) degrees *M_PI / 180
 #define convertToDegrees(radians) radians * 180 / M_PI
+#define NSStringFromBool(b) (b ? @"YES" : @"NO")
 
 // Time Conversions
 #define kMinuteInSeconds 60
@@ -74,4 +84,8 @@
 #define kAppName kLocalizedAppName ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 
 // Colors
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0 blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
+#define UIColorFromRGBA(r, g, b, a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define UIColorFromRGB(r, g, b) UIColorFromRGBA(r, g, b, 1.0)
+
+#define UIColorFromHexA(hexValue, alpha) UIColorFromRGBA(((float)((hexValue & 0xFF0000) >> 16)) / 255.0, ((float)((hexValue & 0xFF00) >> 8)) / 255.0, ((float)(hexValue & 0xFF)) / 255.0, alpha)
+#define UIColorFromHex(hexValue, alpha) UIColorFromHexA(hexValue, alpha)
