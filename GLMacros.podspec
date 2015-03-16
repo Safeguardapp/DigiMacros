@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = 'GLMacros'
-  s.version        = '0.2.1'
+  s.version        = '0.3'
   s.summary        = 'xCode Macros'
   s.license 	   = 'MIT'
   s.description    = 'Collection of macro\'s and constants I use in nearly every XCode project'
