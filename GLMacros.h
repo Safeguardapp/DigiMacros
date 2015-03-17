@@ -88,4 +88,4 @@
 #define UIColorFromRGB(r, g, b) UIColorFromRGBA(r, g, b, 1.0)
 
 #define UIColorFromHexA(hexValue, alpha) UIColorFromRGBA(((float)((hexValue & 0xFF0000) >> 16)) / 255.0, ((float)((hexValue & 0xFF00) >> 8)) / 255.0, ((float)(hexValue & 0xFF)) / 255.0, alpha)
-#define UIColorFromHex(hexValue, alpha) UIColorFromHexA(hexValue, alpha)
+#define UIColorFromHex(hexValue) UIColorFromHexA(hexValue, 1.0)
