@@ -352,7 +352,10 @@
 			}
 		},
 		{
+			"contents": "{\n	\"folders\":\n	[\n		{\n			\"follow_symlinks\": true,\n			\"path\": \".\"\n		}\n	]\n}\n",
 			"file": "GLMacros.sublime-project",
+			"file_size": 73,
+			"file_write_time": 130687256280000000,
 			"settings":
 			{
 				"buffer_size": 73,
@@ -361,9 +364,14 @@
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -677,6 +685,7 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "GLMacros.sublime-project",
 	"replace":
 	{
@@ -686,6 +695,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -698,6 +708,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -706,6 +717,7 @@
 	"select_symbol":
 	{
 		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],

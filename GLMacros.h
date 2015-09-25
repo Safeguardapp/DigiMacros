@@ -59,6 +59,7 @@
 #define isIOS6 ([[UIDevice currentDevice] systemVersion].floatValue >= 6.0)
 #define isIOS7 ([[UIDevice currentDevice] systemVersion].floatValue >= 7.0)
 #define isIOS8 ([[UIDevice currentDevice] systemVersion].floatValue >= 8.0)
+#define isIOS9 ([[UIDevice currentDevice] systemVersion].floatValue >= 9.0)
 
 // Device types
 #define isPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
