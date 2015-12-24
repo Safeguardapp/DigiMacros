@@ -344,21 +344,10 @@
 			}
 		},
 		{
-			"file": "GLMacros.podspec",
+			"file": "GLMacros.h",
 			"settings":
 			{
-				"buffer_size": 562,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "{\n	\"folders\":\n	[\n		{\n			\"follow_symlinks\": true,\n			\"path\": \".\"\n		}\n	]\n}\n",
-			"file": "GLMacros.sublime-project",
-			"file_size": 73,
-			"file_write_time": 130687256280000000,
-			"settings":
-			{
-				"buffer_size": 73,
+				"buffer_size": 4796,
 				"line_ending": "Unix"
 			}
 		}
@@ -400,6 +389,8 @@
 	],
 	"file_history":
 	[
+		"/Users/gertjanleemans/workspace/GLMacros/GLMacros.podspec",
+		"/Users/gertjanleemans/workspace/GLMacros/GLMacros.sublime-project",
 		"/Users/gertjanleemans/workspace/deployment/deployment-api/package.json",
 		"/Users/gertjanleemans/workspace/deployment/deployment-api/app/controller/buildController.js",
 		"/Users/gertjanleemans/workspace/deployment/deployment-api/app/models/build.js",
@@ -558,7 +549,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -586,65 +577,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "GLMacros.podspec",
+					"file": "GLMacros.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 562,
+						"buffer_size": 4796,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								469,
-								469
+								3526,
+								3526
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 351.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "GLMacros.sublime-project",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 73,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
