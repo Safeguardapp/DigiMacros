@@ -17,7 +17,14 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-#define UA_runOnMainThread if (![NSThread isMainThread]) { dispatch_sync(dispatch_get_main_queue(), ^{ [self performSelector:_cmd]; }); return; };
+#define UA_runOnMainThread                          \
+    if (![NSThread isMainThread])                   \
+    {                                               \
+        dispatch_sync(dispatch_get_main_queue(), ^{ \
+          [self performSelector:_cmd];              \
+        });                                         \
+        return;                                     \
+    };
 #pragma clang diagnostic pop
 
 // Paths
@@ -80,12 +87,15 @@
 #define kDayInSeconds 86400
 #define kWeekInSeconds 604800
 
+// JSON conversions
+#define convertToJSONString(value) [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:value options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]
+
 //AppName
 #define kLocalizedAppName [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]
 #define kAppName kLocalizedAppName ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 
 // Colors
-#define UIColorFromRGBA(r, g, b, a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define UIColorFromRGBA(r, g, b, a) [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
 #define UIColorFromRGB(r, g, b) UIColorFromRGBA(r, g, b, 1.0)
 
 #define UIColorFromHexA(hexValue, alpha) UIColorFromRGBA(((float)((hexValue & 0xFF0000) >> 16)), ((float)((hexValue & 0xFF00) >> 8)), ((float)(hexValue & 0xFF)), alpha)
