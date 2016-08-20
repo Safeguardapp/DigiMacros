@@ -344,10 +344,18 @@
 			}
 		},
 		{
+			"file": "GLMacros.podspec",
+			"settings":
+			{
+				"buffer_size": 814,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "GLMacros.h",
 			"settings":
 			{
-				"buffer_size": 4796,
+				"buffer_size": 5250,
 				"line_ending": "Unix"
 			}
 		}
@@ -549,7 +557,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -565,8 +573,8 @@
 						"selection":
 						[
 							[
-								304,
-								304
+								414,
+								414
 							]
 						],
 						"settings":
@@ -577,24 +585,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "GLMacros.h",
+					"file": "GLMacros.podspec",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4796,
+						"buffer_size": 814,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3526,
-								3526
+								809,
+								809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "GLMacros.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -607,7 +645,7 @@
 						"translation.y": 351.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
