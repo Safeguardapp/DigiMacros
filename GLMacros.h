@@ -1,6 +1,8 @@
 // App Delegate
+#if __has_include("AppDelegate.h")
 #import "AppDelegate.h"
 #define kAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#endif
 
 // General
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
