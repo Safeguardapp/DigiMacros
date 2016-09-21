@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                      = 'DigiMacros'
-  s.version                   = '1.0.2'
+  s.version                   = '1.0.3'
   s.summary                   = 'xCode Macros'
   s.license 	                = 'MIT'
   s.description               = 'Collection of macro\'s and constants I use in nearly every XCode project'
