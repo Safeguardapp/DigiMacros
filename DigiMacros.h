@@ -75,6 +75,8 @@
 // Device types
 #define isPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define isTV (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomTV)
+#define isCar (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomCarPlay)
 
 // General conversions
 #define convertToLbs(kg) kg * 2.2
