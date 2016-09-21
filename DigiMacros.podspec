@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-  s.name                      = 'GLMacros'
+  s.name                      = 'DigiMacros'
   s.version                   = '1.0.2'
   s.summary                   = 'xCode Macros'
   s.license 	                = 'MIT'
   s.description               = 'Collection of macro\'s and constants I use in nearly every XCode project'
-  s.homepage                  = 'https://github.com/gertjanleemans/GLMacros'
+  s.homepage                  = 'https://github.com/gertjanleemans/DigiMacros'
   s.authors                   = {'Gertjan Leemans' => 'gertjan@digitalisma.com'}
-  s.source                    = { :git => 'https://github.com/gertjanleemans/GLMacros.git', :tag => s.version }
+  s.source                    = { :git => 'https://github.com/gertjanleemans/DigiMacros.git', :tag => s.version }
   s.source_files              = '*.{h,m}'
   s.platform                  = :ios, :tvos, :watchos
   s.ios.deployment_target     = '7.0'
